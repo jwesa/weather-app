@@ -1,12 +1,11 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Row, Col, FormControl, Button } from 'react-bootstrap';
 
-
-const CityInput = ({onSearch}) => {
+const CitySelector = ({ handleSearch }) => {
 	const [city, setCity] = useState('');
+
 	return (
-		<div>
+		<>
 			<Row>
 				<Col>
 					<h1>Search your city</h1>
@@ -14,7 +13,7 @@ const CityInput = ({onSearch}) => {
 			</Row>
 
 			<Row>
-				<Col xs={4} className="text-center">
+				<Col xl={5}>
 					<FormControl
 						placeholder="Enter city"
 						onChange={(event) => setCity(event.target.value)}
@@ -25,14 +24,11 @@ const CityInput = ({onSearch}) => {
 
 			<Row>
 				<Col>
-					<Button onClick={onSearch}>
-						Check Weather
-					</Button>
+					<Button onClick={() => handleSearch(city)}>Check Weather</Button>
 				</Col>
 			</Row>
+		</>
+	);
+};
 
-		</div >
-	)
-}
-
-export default CityInput;
+export default CitySelector;

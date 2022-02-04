@@ -2,24 +2,28 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 
 
-const WeatherCard = ({ datetime, temp_min, temp_max, main, icon }) => {
-	const date = new Date(datetime);
+const WeatherCard = ({ dt, temp_min, temp_max, main, icon }) => {
+	const date = new Date(dt);
 
 	return (
-		<Card style={{ width: '18rem' }}>
+		<div>
 			<Card.Img
 				variant="top"
-				src={`http://openweathermap.org/img/wn/${icon}@2x.png`} />
+				src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
+			/>
 			<Card.Body>
 				<Card.Title>{main}</Card.Title>
 				<p>
-					{date.toLocaleDateString()} - {date.toLocaleTimeString()}
+					<span style={{ fontSize: '1rem', fontWeight: '500' }}>
+						{date.toLocaleTimeString()}
+					</span>
+					<br />
+					{date.toLocaleDateString()}
 				</p>
 				<p>Min: {temp_min}</p>
 				<p>Max: {temp_max}</p>
 			</Card.Body>
-		</Card>
-	)
-}
-
+		</div>
+	);
+};
 export default WeatherCard;
