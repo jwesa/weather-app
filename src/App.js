@@ -1,25 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
+import WeatherCard from './components/WeatherCard';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<WeatherCard
+				datetime={1602104400 * 1000}
+				temp_min="22.67"
+				temp_max="24.39"
+				main="Clear"
+				icon="01d"
+			/>
+		</div>
+	);
 }
 
 export default App;
