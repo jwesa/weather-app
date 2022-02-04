@@ -1,18 +1,14 @@
+import React from 'react';
+import CityInput from './components/CityInput';
+import { Container } from 'react-bootstrap';
 
 import './App.css';
-import WeatherCard from './components/WeatherCard';
 
-function App() {
+const App = () => {
 	return (
-		<div className="App">
-			<WeatherCard
-				datetime={1602104400 * 1000}
-				temp_min="22.67"
-				temp_max="24.39"
-				main="Clear"
-				icon="01d"
-			/>
-		</div>
+		<Container className="App">
+			<CityInput />
+		</Container>
 	);
 }
 
