@@ -15,7 +15,7 @@ const WeatherCard = ({ dt, temp_min, temp_max, main, icon }) => {
 				<Card.Title>{main}</Card.Title>
 				<p>
 					<span style={{ fontSize: '1rem', fontWeight: '500' }}>
-						{date.toLocaleTimeString()}
+						{date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
 					</span>
 					<br />
 					{date.toLocaleDateString()}

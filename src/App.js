@@ -26,7 +26,7 @@ const App = () => {
 
 	return (
 		<Container className="App">
-			<CityInput handleSearch={(city) => setUrl(`${API_BASE_URL}/data/2.5/forecast?q=${city}&appid=${API_KEY}`)} />
+			<CityInput handleSearch={(city) => setUrl(`${API_BASE_URL}/data/2.5/forecast?q=${city}&units=metric&appid=${API_KEY}`)} />
 			{getContent()}
 		</Container>
 	);
