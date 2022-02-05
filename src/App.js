@@ -25,7 +25,7 @@ const App = () => {
 	console.log(data);
 
 	return (
-		<Container className="App">
+		<Container className="App mt-4">
 			<CityInput handleSearch={(city) => setUrl(`${API_BASE_URL}/data/2.5/forecast?q=${city}&units=metric&appid=${API_KEY}`)} />
 			{getContent()}
 		</Container>

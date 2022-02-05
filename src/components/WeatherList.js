@@ -4,7 +4,7 @@ import WeatherCard from './WeatherCard'
 
 const WeatherList = ({ weathers }) => {
 	return (
-		<Row>
+		<Row style={{marginLeft: '18px'}}>
 			{weathers.map(({ dt, main, weather }) => (
 				<Col key={dt}>
 					<WeatherCard
