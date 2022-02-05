@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
-import { Row, Col, FormControl, Button } from 'react-bootstrap';
+import { Row, Col, FormControl, Button, Container } from 'react-bootstrap';
 
 const CitySelector = ({ handleSearch }) => {
 	const [city, setCity] = useState('');
 
+	const handleKeyDown = (event) => {
+		if (event.code === 'Enter') {
+			handleSearch(city);
+		}
+	}
+
 	return (
-		<>
+		<Container className="justify-content-center">
 			<Row>
 				<Col>
 					<h1>Search your city</h1>
@@ -17,6 +23,7 @@ const CitySelector = ({ handleSearch }) => {
 					<FormControl
 						placeholder="Enter city"
 						onChange={(event) => setCity(event.target.value)}
+						onKeyDown={handleKeyDown}
 						value={city}
 					/>
 				</Col>
@@ -27,7 +34,7 @@ const CitySelector = ({ handleSearch }) => {
 					<Button onClick={() => handleSearch(city)}>Check Weather</Button>
 				</Col>
 			</Row>
-		</>
+		</Container>
 	);
 };
 
