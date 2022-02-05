@@ -14,7 +14,7 @@ const CitySelector = ({ handleSearch }) => {
 		<Container className="justify-content-center">
 			<Row>
 				<Col>
-					<h1>Search your city</h1>
+					<h1>5 days weather forecast</h1>
 				</Col>
 			</Row>
 
