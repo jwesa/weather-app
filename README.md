@@ -1,1 +1,2 @@
-React-redux weather-app
+React weather-app. 
+Styling: react-bootstrap
